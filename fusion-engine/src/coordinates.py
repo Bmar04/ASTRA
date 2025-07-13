@@ -3,8 +3,10 @@ import numpy as np
 
 #Converts polar coordinates to cartesian coordinates
 def polar_to_cartesian(angle: float, radius: float, sensor_origin: tuple) -> tuple:
-    x = radius * math.cos(angle) + sensor_origin[0]
-    y = radius * math.sin(angle) + sensor_origin[1]
+    # Shift angle by +π/2 so 0 is "up" (y-axis)
+    shifted_angle = angle + math.pi / 2
+    x = radius * math.cos(shifted_angle) + sensor_origin[0]
+    y = radius * math.sin(shifted_angle) + sensor_origin[1]
     return (x, y)
 
 #Converts cartesian coordinates to polar coordinates
