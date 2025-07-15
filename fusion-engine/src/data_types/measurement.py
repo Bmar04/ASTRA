@@ -5,7 +5,12 @@ import threading
 from dataclasses import dataclass
 from datetime import datetime
 from typing import Optional, Callable, Tuple
-import coordinates as coord  # Your existing coordinate module
+import sys
+import os
+
+# Import coordinates directly
+sys.path.append(os.path.join(os.path.dirname(__file__), '..', '..', 'math'))
+import coordinates as coord
 
 
 @dataclass

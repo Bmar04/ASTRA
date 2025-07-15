@@ -3,9 +3,9 @@ import sys
 import os
 from datetime import datetime
 
-# Add the src directory to the Python path
-sys.path.insert(0, os.path.join(os.path.dirname(__file__), '..', '..', 'src'))
-from measurement import Measurement
+# Add the fusion-engine directory to the Python path
+sys.path.insert(0, os.path.join(os.path.dirname(__file__), '..', '..'))
+from src.data_types.measurement import Measurement
 
 class TestMeasurement(unittest.TestCase):
 
